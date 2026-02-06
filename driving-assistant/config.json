@@ -1,0 +1,25 @@
+{
+    "wakeWord": "ok-computer",
+    "performanceMode": "potato",
+    "ttsVoice": "M3",
+    "audioDevice": "default",
+    "locations": {
+        "home": "",
+        "work": ""
+    },
+    "voice": {
+        "enabled": true,
+        "volume": 0.8
+    },
+    "optimization": {
+        "maxMemoryMB": 512,
+        "vadBufferMs": 500,
+        "transcriptionTimeout": 5000
+    },
+    "features": {
+        "youtube": true,
+        "navigation": true,
+        "search": false,
+        "reminders": true
+    }
+}
