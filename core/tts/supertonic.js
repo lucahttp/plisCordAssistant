@@ -423,7 +423,13 @@ class UnicodeProcessor {
         text = text.replace(/[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}]+/gu, '');
 
         const replacements = {
-            '–': '-', '—': '-', '_': ' ', '"': '"', '"': '"', ''': "'", ''': "'",
+            '\u2013': '-', // en-dash
+            '\u2014': '-', // em-dash
+            '_': ' ',
+            '\u201C': '"', // left double quote
+            '\u201D': '"', // right double quote
+            '\u2018': "'", // left single quote
+            '\u2019': "'", // right single quote
         };
         for (const [k, v] of Object.entries(replacements)) {
             text = text.replaceAll(k, v);
